@@ -48,31 +48,37 @@
                     Placeholder="Entrer your password...">
                     </Entry>
                 </Grid>
+                <ActivityIndicator>
+                </ActivityIndicator>
                 <StackLayout
                 Orientation="Horizontal">
                     <Label
                     HorizontalOptions="StartAndExpand"
-                    Text="Remember me in this device"
+                    Text="Remember me on this device"
+                    TextColor="Black"
                     VerticalOptions="Center">
                     </Label>
-
-                    <Switch
+                   <Switch
+                    IsToggled="{Binding IsRemembered, Mode=TwoWay}"
                     HorizontalOptions="End">
                     </Switch>
                 </StackLayout>
-                <ActivityIndicator>
-
-                </ActivityIndicator>
+                <Label
+                    HorizontalOptions="Center"
+                    Text="forgot your password"
+                    TextColor="Blue"
+                    VerticalOptions="CenterAndExpand">
+                </Label>
                 <StackLayout
                 Margin="40,0">
-                    <Button
-                BackgroundColor="Navy"
-                BorderRadius="23"
-                HeightRequest="46"
-                Text="Login"
-                TextColor="White">
-                    </Button>
-                    <Button
+                <Button
+                    BackgroundColor="Navy"
+                    BorderRadius="23"
+                    HeightRequest="46"
+                    Text="Login"
+                    TextColor="White">
+                </Button>
+                <Button
                 BackgroundColor="Purple"
                 BorderRadius="23"
                 HeightRequest="46"
