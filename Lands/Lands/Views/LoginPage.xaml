@@ -6,7 +6,8 @@
     BindingContext="{Binding Main, Source={StaticResource Locator}}"
     Title="Lands">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView
+            BindingContext="{Binding Login}">
             <StackLayout
             Padding="5">
                 <Image
@@ -21,31 +22,34 @@
                         <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
                     <Label
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Text="E-Mail"
-                    VerticalOptions="Center">
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="E-Mail"
+                        VerticalOptions="Center">
                     </Label>
                     <Entry
-                    Grid.Row="0"
-                    Grid.Column="1"   
-                    Keyboard="Email"
-                    Placeholder="Entrer your email...">
+                        Grid.Row="0"
+                        Grid.Column="1"   
+                        Keyboard="Email"
+                        Text="{Binding Email, Mode=TwoWay}"
+                        Placeholder="Entrer your email...">
                     </Entry>
                     <Label
-                    Grid.Row="1"
-                    Grid.Column="0"  
-                    Text="Password"
-                    VerticalOptions="Center">
+                        Grid.Row="1"
+                        Grid.Column="0"  
+                        Text="Password"
+                        VerticalOptions="Center">
                     </Label>
                     <Entry
-                    Grid.Row="1"
-                    Grid.Column="1"     
-                    IsPassword="True"
-                    Placeholder="Entrer your password...">
+                        Grid.Row="1"
+                        Grid.Column="1"     
+                        IsPassword="True"
+                        Text="{Binding Password, Mode=TwoWay}"
+                        Placeholder="Entrer your password...">
                     </Entry>
                 </Grid>
                 <ActivityIndicator
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}"
                     VerticalOptions="CenterAndExpand">
                 </ActivityIndicator>
                 <StackLayout
@@ -53,41 +57,42 @@
                 Orientation="Horizontal"
                 VerticalOptions="CenterAndExpand">
                     <Label
-                    HorizontalOptions="StartAndExpand"
-                    Text="Remember me on this device"
-                    TextColor="Black"
-                    VerticalOptions="Center">
+                        HorizontalOptions="StartAndExpand"
+                        Text="Remember me on this device"
+                        TextColor="Black"
+                        VerticalOptions="Center">
                     </Label>
-                   <Switch
-                    IsToggled="{Binding IsRemembered, Mode=TwoWay}"
-                    HorizontalOptions="End">
+                    <Switch
+                        IsToggled="{Binding IsRemembered, Mode=TwoWay}"
+                        HorizontalOptions="End">
                     </Switch>
                 </StackLayout>
-                <Label
-                    HorizontalOptions="Center"
-                    Text="forgot your password"
-                    TextColor="Blue"
-                    VerticalOptions="CenterAndExpand">
-                </Label>
+                    <Label
+                        HorizontalOptions="Center"
+                        Text="forgot your password"
+                        TextColor="Blue"
+                        VerticalOptions="CenterAndExpand">
+                    </Label>
                 <StackLayout
                 Margin="40,0"
                 Orientation="Horizontal"
                 VerticalOptions="CenterAndExpand">
-                <Button
-                    BackgroundColor="Navy"
-                    BorderRadius="23"
-                    HeightRequest="46"
-                    HorizontalOptions="FillAndExpand"
-                    Text="Login"
-                    TextColor="White">
-                </Button>
-                <Button
-                BackgroundColor="Purple"
-                BorderRadius="23"
-                HeightRequest="46"
-                HorizontalOptions="FillAndExpand"
-                Text="Register"
-                TextColor="White">
+                    <Button
+                        BackgroundColor="Navy"
+                        BorderRadius="23"
+                        Command="{Binding LoginCommand}"
+                        HeightRequest="46"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Login"
+                        TextColor="White">
+                    </Button>
+                    <Button
+                        BackgroundColor="Purple"
+                        BorderRadius="23"
+                        HeightRequest="46"
+                        HorizontalOptions="FillAndExpand"
+                        Text="Register"
+                        TextColor="White">
                     </Button>
                 </StackLayout>
                 <StackLayout
@@ -95,16 +100,16 @@
                 Orientation="Horizontal"
                 VerticalOptions="CenterAndExpand">
                     <Image
-                    Source="Facebook"
-                    WidthRequest="70">
+                        Source="Facebook"
+                        WidthRequest="70">
                     </Image>
                     <Image
-                    Source="TWITTER"
-                    WidthRequest="70">
+                        Source="TWITTER"
+                        WidthRequest="70">
                     </Image>
                     <Image
-                    Source="Instagram"
-                    WidthRequest="65">
+                        Source="Instagram"
+                        WidthRequest="65">
                     </Image>
 
                 </StackLayout>
