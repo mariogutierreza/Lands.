@@ -3,7 +3,7 @@
     public class MainViewModel
     {
         #region ViewModels
-        private LoginViewModel Login
+        public LoginViewModel Login
         {
             get;
             set;
@@ -13,7 +13,7 @@
         #region Constructors
         public MainViewModel()
         {
-            Login = new LoginViewModel();
+            this.Login = new LoginViewModel();
         }
         #endregion
     }
