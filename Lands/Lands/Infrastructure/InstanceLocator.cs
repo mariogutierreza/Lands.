@@ -6,6 +6,7 @@
 
     {
         #region Properties
+
         public MainViewModel Main
 
         {
