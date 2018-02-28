@@ -1,17 +1,16 @@
 ﻿namespace Lands.ViewModels
 {
     using GalaSoft.MvvmLight.Command;
+    using Lands.Services;
     using System.ComponentModel;
     using System.Windows.Input;
     using Views;
     using Xamarin.Forms;
 
-
-
     public class LoginViewModel : BaseViewModel
     {
-        #region Events
-        public event PropertyChangedEventHandler PropertyChanged;
+        #region Services
+        private ApiService apiService;
         #endregion
 
         #region Attributes
