@@ -14,6 +14,12 @@
             get;
             set;
         }
+
+        public TokenResponse token
+        {
+            get;
+            set;
+        }
         #endregion
 
         public LoginViewModel Login
