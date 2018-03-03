@@ -5,6 +5,7 @@
     using System.Windows.Input;
     using Views;
     using Xamarin.Forms;
+    using Helpers;
 
     public class LoginViewModel : BaseViewModel
     {
@@ -79,9 +80,9 @@
 
             {
                 await Application.Current.MainPage.DisplayAlert(
-                     "Error",
-                     "You must enter an email",
-                     "Accept");
+                     Languages.Error,
+                     Languages.EmailValidation,
+                     Languages.Accept);
                 return;
             }
 
