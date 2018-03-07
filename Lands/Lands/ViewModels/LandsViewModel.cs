@@ -8,6 +8,7 @@
     using System.Collections.ObjectModel;
     using System.Linq;
     using System.Windows.Input;
+    using Helpers;
     using Xamarin.Forms;
 
     public class LandsViewModel : BaseViewModel

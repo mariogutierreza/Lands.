@@ -4,9 +4,10 @@
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:i18n="clr-namespace:Lands.Helpers"
              x:Class="Lands.Views.LandsPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="Lands">
+             Title="{i18n:Translate Countries}">
     <ContentPage.Resources>
         <ResourceDictionary>
             <ffimageloadingsvg:SvgImageSourceConverter 
@@ -20,7 +21,7 @@
                 BackgroundColor="Silver"
                 HeightRequest="40"
                 Text="{Binding Filter, Mode=TwoWay}"
-                Placeholder="Search..."
+                Placeholder="{i18n:Translate Search}"
                 SearchCommand="{Binding SearchCommand}">
             </SearchBar>
             <ListView 

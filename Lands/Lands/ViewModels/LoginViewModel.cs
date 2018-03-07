@@ -89,9 +89,9 @@
             if (string.IsNullOrEmpty(this.Password))
             {
                 await Application.Current.MainPage.DisplayAlert(
-                     "Error",
-                     "You must enter a password",
-                     "Accept");
+                     Languages.Error,
+                     Languages.PasswordValidation,
+                     Languages.Accept);
                 return;
             }
 
