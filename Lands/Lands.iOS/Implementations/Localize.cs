@@ -86,6 +86,4 @@ namespace Lands.iOS.Implementations
             return netLanguage;
         }
     }
-
-
 }

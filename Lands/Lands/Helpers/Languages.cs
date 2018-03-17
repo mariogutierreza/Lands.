@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Lands.Helpers
+﻿namespace Lands.Helpers
 {
     using Xamarin.Forms;
     using Interfaces;
