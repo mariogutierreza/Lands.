@@ -252,4 +252,16 @@
   <data name="PasswordValidation" xml:space="preserve">
     <value>Debes ingresar una contraseña.</value>
   </data>
+  <data name="Menu" xml:space="preserve">
+    <value>Menú</value>
+  </data>
+  <data name="Stactics" xml:space="preserve">
+    <value>Estadistica</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Cerrar Sesion</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>Mi Perfil</value>
+  </data>
 </root>
